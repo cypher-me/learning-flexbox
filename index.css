@@ -1,0 +1,12 @@
+body {
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    border: 2px #444444 solid;
+    padding: 20px;
+}
