@@ -1,12 +1,60 @@
-body {
-    height: 100vh;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.container {
-    border: 2px #444444 solid;
-    padding: 20px;
+.flex-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    /* gives direction of the flex either column or row  */
+    background-color: #cccaca;
+    /* justify-content: ; */
+    /* align-items: ; */
+    /* Main axis depends on flex direction. If it is a row */
+    /* main axis is the row and cross axis is the column (and viceverser)*/
+    /*end : right, start : left, centre : centre, space-around : (literaly what it says), space-between : (space is shared between the items but not at the ends;)*/
+    /* justify-content pertains to the main axis */
+    /* align-items pertains to cross axis(column layout) It needs a height to work well. */
+    /* flex-wrap: wrap;  */
+    /* Allows for something like text wrap for flex-container children ()responsivity*/
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    background-color: #505050;
+    margin: 10px;
+}
+
+/* Order is used to arrange the flex-children according to a given order */
+/* an order property is given to each child and diven an order number accorcing to available children */
+
+/* flex-basis used to work n the width of flex children */
+/* flex-basis gives the width of the flex-item, morelike the smallest size it can get to. */
+
+/* flex-grow is a growth rate. Default is 0. Given as a single number. */
+/* The flex children can each have different flex-grow values or have the same */
+
+/* flex-shrink is the opposite of flex-grow */
+
+.item:nth-child(1) {
+    /* align-self: end; */
+    /* order: 2; */
+    /* flex-basis: 50%; */
+    flex-shrink: 2;
+    /*When it is 2, It occupies 2/3 the flex container because it is 1 of three*/
+}
+
+.item:nth-child(2) {
+    /* align-self: center; */
+    /* order: 1; */
+    flex-shrink: 2;
+}
+
+.item:nth-child(3) {
+    /* align-self: start; */
+    /* order: 3; */
+    flex-shrink: 2;
 }
